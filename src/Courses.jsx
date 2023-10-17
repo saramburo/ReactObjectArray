@@ -32,16 +32,31 @@ export function Courses({ setCoursesfn }) {
     <>
       <form onSubmit={handleAdd}>
         <div>
-          <label>Universidad</label>
-          <input type="text" onChange={handleUniversidadChange} />
+          <label className="category-label">University</label>
+          <input
+            className="category-details"
+            type="text"
+            onChange={handleUniversidadChange}
+            required
+          />
         </div>
         <div>
-          <label>Estudio</label>
-          <input type="text" onChange={handleEstudioChange} />
+          <label className="category-label">Title of Study</label>
+          <input
+            className="category-details"
+            type="text"
+            onChange={handleEstudioChange}
+            required
+          />
         </div>
         <div>
-          <label>Fecha Graduación</label>
-          <input type="text" onChange={handleGraduacionChange} />
+          <label className="category-label">Graduation Date</label>
+          <input
+            className="category-details"
+            type="date"
+            onChange={handleGraduacionChange}
+            required
+          />
         </div>
         <button>Add</button>
       </form>
