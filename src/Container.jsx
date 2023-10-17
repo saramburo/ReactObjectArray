@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export function Container({ task, courses, delCoursesfn }) {
+export function Container({ task, courses, delCoursesfn,experiences }) {
   const [editing, setEditing] = useState(false);
   const [course, setCourse] = useState("");
   const [universidad,setUniversidad]=useState();
@@ -36,7 +36,9 @@ export function Container({ task, courses, delCoursesfn }) {
                   <input
                     type="text"
                     style={editMode}
-                    onChange={(event) => {course.university=event.target.value}}
+                    onChange={(event) => {
+                      course.university = event.target.value;
+                    }}
                   />
                 </div>
                 <div className="container-details">
@@ -45,7 +47,9 @@ export function Container({ task, courses, delCoursesfn }) {
                   <input
                     type="text"
                     style={editMode}
-                    onChange={(event) => {course.titulo=event.target.value}}
+                    onChange={(event) => {
+                      course.titulo = event.target.value;
+                    }}
                   />
                 </div>
                 <div className="container-details">
@@ -54,7 +58,9 @@ export function Container({ task, courses, delCoursesfn }) {
                   <input
                     type="text"
                     style={editMode}
-                    onChange={(event) => {course.fechaGraduacion=event.target.value}}
+                    onChange={(event) => {
+                      course.fechaGraduacion = event.target.value;
+                    }}
                   />
                 </div>
                 <button onClick={() => delCoursesfn(course.id)}>Delete</button>
@@ -63,6 +69,17 @@ export function Container({ task, courses, delCoursesfn }) {
             </>
           );
         })}
+        <div>
+          {experiences.map((experience) => {
+            return (
+              <>
+                <div key={experience.id}>
+                  <p>{experience.company}</p>
+                </div>
+              </>
+            );
+          })}
+        </div>
       </div>
     </>
   );
