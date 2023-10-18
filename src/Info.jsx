@@ -30,6 +30,7 @@ export function Info({ setInfofn }) {
       telefono: phone,
       nacimiento: birth,
     });
+    event.target.reset();
   };
   return (
     <>

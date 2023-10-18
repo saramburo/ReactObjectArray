@@ -1,22 +1,9 @@
 #root {
-  max-width: 1280px;
+  width: 100vw;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   box-sizing: border-box;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
@@ -51,6 +38,7 @@
 }
 
 .container-detail-title {
+  color: #189ab4;
   margin: 0 5px 0 0;
 }
 .container-detail-description {
@@ -63,6 +51,7 @@
 
 .category-label {
   margin: 0 5px 0 0;
+  color: #189ab4;
 }
 
 .main {
@@ -70,7 +59,52 @@
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
+  max-width: 70%;
+  margin: 0 auto;
 }
 .content-header-title {
   font-size: 40px;
+}
+.main-section {
+  width: 30%;
+  margin: 0 auto;
+  padding: 0;
+  border-right: 1px dotted blue;
+  border-left: 1px dotted blue;
+  height: 75vh;
+}
+.container {
+  width: 70%;
+  margin: 0 auto;
+  border-right: 1px dotted blue;
+  height: 75vh;
+}
+.content-header-title {
+  color: #05445e;
+}
+
+input {
+  border: 1px solid #05445e;
+  border-radius: 4px;
+  height: 20px;
+  width: 50%;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #d4f1f4;
+}
+
+h1 {
+  color: #05445e;
+}
+
+h2 {
+  color: #189ab4;
+}
+
+label {
+  color: #189ab4;
+  text-align: right;
 }

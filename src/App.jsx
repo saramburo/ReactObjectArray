@@ -37,7 +37,10 @@ function App() {
   return (
     // eslint-disable-next-line react/react-in-jsx-scope
     <>
-      <h1>CV Application</h1>
+      <header>
+        <h1>CV Application</h1>
+      </header>
+
       <div className="main">
         <div className="main-section">
           <h2 className="content-header-title">Sections</h2>

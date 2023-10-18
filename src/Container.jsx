@@ -68,7 +68,7 @@ export function Container({
   }
   return (
     <>
-      <div className="container">
+      <div className="container-main">
         <h2 className="content-header-title">Content</h2>
         <h2 className="content-title">Personal Information</h2>
         {info.map((data) => {
@@ -144,61 +144,65 @@ export function Container({
         {courses.map((course) => {
           return (
             <>
-              <div key={course.id}>
-                <div className="container-details">
-                  <h3 className="container-detail-title">University</h3>
-                  <p
-                    className="container-detail-description"
-                    style={viewModeCourse}
-                  >
-                    {course.university}
-                  </p>
-                  <input
-                    defaultValue={course.university}
-                    type="text"
-                    style={editModeCourse}
-                    onChange={(event) => {
-                      course.university = event.target.value;
-                    }}
-                  />
+              <div>
+                <div key={course.id}>
+                  <div className="container-details">
+                    <h3 className="container-detail-title">University</h3>
+                    <p
+                      className="container-detail-description"
+                      style={viewModeCourse}
+                    >
+                      {course.university}
+                    </p>
+                    <input
+                      defaultValue={course.university}
+                      type="text"
+                      style={editModeCourse}
+                      onChange={(event) => {
+                        course.university = event.target.value;
+                      }}
+                    />
+                  </div>
+                  <div className="container-details">
+                    <h3 className="container-detail-title">Title</h3>
+                    <p
+                      className="container-detail-description"
+                      style={viewModeCourse}
+                    >
+                      {course.titulo}
+                    </p>
+                    <input
+                      defaultValue={course.titulo}
+                      type="text"
+                      style={editModeCourse}
+                      onChange={(event) => {
+                        course.titulo = event.target.value;
+                      }}
+                    />
+                  </div>
+                  <div className="container-details">
+                    <h3 className="container-detail-title">Graduation Date</h3>
+                    <p
+                      className="container-detail-description"
+                      style={viewModeCourse}
+                    >
+                      {course.fechaGraduacion}
+                    </p>
+                    <input
+                      defaultValue={course.fechaGraduacion}
+                      type="date"
+                      style={editModeCourse}
+                      onChange={(event) => {
+                        course.fechaGraduacion = event.target.value;
+                      }}
+                    />
+                  </div>
+                  <button onClick={() => delCoursesfn(course.id)}>
+                    Delete
+                  </button>
                 </div>
-                <div className="container-details">
-                  <h3 className="container-detail-title">Title</h3>
-                  <p
-                    className="container-detail-description"
-                    style={viewModeCourse}
-                  >
-                    {course.titulo}
-                  </p>
-                  <input
-                    defaultValue={course.titulo}
-                    type="text"
-                    style={editModeCourse}
-                    onChange={(event) => {
-                      course.titulo = event.target.value;
-                    }}
-                  />
-                </div>
-                <div className="container-details">
-                  <h3 className="container-detail-title">Graduation Date</h3>
-                  <p
-                    className="container-detail-description"
-                    style={viewModeCourse}
-                  >
-                    {course.fechaGraduacion}
-                  </p>
-                  <input
-                    defaultValue={course.fechaGraduacion}
-                    type="date"
-                    style={editModeCourse}
-                    onChange={(event) => {
-                      course.fechaGraduacion = event.target.value;
-                    }}
-                  />
-                </div>
-                <button onClick={() => delCoursesfn(course.id)}>Delete</button>
-                <button onClick={handleEditingCourse}>Edit</button>
               </div>
+              <button onClick={handleEditingCourse}>Edit</button>
             </>
           );
         })}
