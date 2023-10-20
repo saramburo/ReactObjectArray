@@ -26,6 +26,7 @@ export function Courses({ setCoursesfn }) {
       titulo: estudio,
       fechaGraduacion: graduacion,
     });
+    event.target.reset();
   };
 
   return (

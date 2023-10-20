@@ -32,6 +32,7 @@ export function Experiences({ setExperiencefn }) {
       start: fechaInicio,
       end: fechaFin,
     });
+    event.target.reset();
   };
   return (
     <>

@@ -42,18 +42,19 @@ export function Container({
   let viewMode = {};
   let editMode = {};
 
-  let viewModeInfo = {};
-  let editModeInfo = {};
-
   let viewModeCourse = {};
   let editModeCourse = {};
 
   //needs to be improved
+
   if (editing) {
     viewMode.display = "none";
   } else {
     editMode.display = "none";
   }
+
+  let viewModeInfo = {};
+  let editModeInfo = {};
 
   if (editingInfo) {
     viewModeInfo.display = "none";
